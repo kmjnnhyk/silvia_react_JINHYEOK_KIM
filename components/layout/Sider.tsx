@@ -24,7 +24,7 @@ const MySider = () => {
       <Menu
         mode="inline"
         defaultSelectedKeys={['sub2']}
-        style={{ height: '100%', borderRight: 0, backgroundColor: 'var(--color-geek-blue-1000)' }}
+        style={{ height: '100%', backgroundColor: 'var(--color-geek-blue-1000)', color: '#FFFFFF' }}
         items={SIDE_MENU_LIST}
       />
     </Sider>
