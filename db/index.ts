@@ -2,7 +2,7 @@ export const db = {
   profile: {
     nickname: '김진혁',
     age: 28,
-    isMage: true,
+    isMale: true,
     birthOfDate: 20,
     birthOfMonth: 6,
     birthOfYear: 1995,

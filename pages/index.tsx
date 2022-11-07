@@ -1,18 +1,19 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { NextPage } from 'next';
 import ProfileHeader from 'components/ProfileHeader';
 import MeetingHistory from 'components/MeetingHistory';
 import AverageTrainingData from 'components/AverageTrainingData';
 import TrainingStatusGraph from 'components/TrainingStatusGraph';
 
-const DashBoard: NextPage = (data) => {
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
+interface Props {
+  profile: ProfileProps;
+  meetings: Array<MeetingProps>;
+}
 
+const DashBoard: NextPage<Props> = ({ profile, meetings }) => {
   return (
     <>
-      <ProfileHeader />
+      <ProfileHeader data={profile} />
       <MeetingHistory />
       <AverageTrainingData />
       <TrainingStatusGraph />
@@ -20,10 +21,10 @@ const DashBoard: NextPage = (data) => {
   );
 };
 
-DashBoard.getInitialProps = async (ctx) => {
+DashBoard.getInitialProps = async () => {
   const res = await fetch('http://localhost:3000/api', { method: 'GET' });
   const json = await res.json();
-  return { data: json };
+  return { profile: json.profile, meetings: json.meetings };
 };
 
 export default DashBoard;

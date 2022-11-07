@@ -1,4 +1,4 @@
-import { Tabs } from 'antd';
+import { Empty, Tabs } from 'antd';
 import React from 'react';
 
 const TrainingStatusGraph = () => {
@@ -18,6 +18,7 @@ const TrainingStatusGraph = () => {
         };
       })}
     />
+    // <Empty></Empty>
   );
 };
 
