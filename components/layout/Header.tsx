@@ -1,9 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
-import { Button, Layout } from 'antd';
+import { Avatar, Badge, Button, Layout } from 'antd';
 import { MessageOutlined, BellOutlined } from '@ant-design/icons';
+import NextImage from 'components/commons/NextImage';
 import logoSrc from '/assets/images/header/logo.svg';
-import ProfileCircle from 'components/ProfileCircle';
+import profileImgSrc from '/assets/images/header/profile_image.jpeg';
 
 const { Header } = Layout;
 
@@ -28,8 +29,11 @@ const MyHeader = () => {
           >
             상담 대기실 입장
           </Button>
-          <BellOutlined style={{ fontSize: '24px' }} />
-          <ProfileCircle radius={32} />
+          <Badge count={'N'} size={'small'} color={'#4D61FF'}>
+            <BellOutlined style={{ fontSize: '28px' }} />
+          </Badge>
+
+          <Avatar size={32} src={<NextImage src={profileImgSrc} alt={'profile'} />} />
         </div>
       </Header>
     </>

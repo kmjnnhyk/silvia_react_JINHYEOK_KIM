@@ -36,6 +36,12 @@ a {
   color: #ffffff !important;
 }
 
+.auto-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .auto-layout-space-between {
   display: flex;
   flex-direction: row;

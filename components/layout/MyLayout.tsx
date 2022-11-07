@@ -16,7 +16,7 @@ const MyLayout = ({ children }: ILayoutProps) => {
       <MyHeader />
       <Layout>
         <MySider />
-        <Layout style={{ padding: '26px 24px' }}>{children}</Layout>
+        <Layout>{children}</Layout>
       </Layout>
     </Layout>
   );
