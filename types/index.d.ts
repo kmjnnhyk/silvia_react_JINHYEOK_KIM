@@ -16,6 +16,6 @@ interface MeetingProps {
   startTime: string;
   endTime: string;
   title: string;
-  file: boolean;
+  fileFormat: string;
   fileSize: string;
 }

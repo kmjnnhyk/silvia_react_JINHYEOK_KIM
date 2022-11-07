@@ -14,7 +14,7 @@ const DashBoard: NextPage<Props> = ({ profile, meetings }) => {
   return (
     <>
       <ProfileHeader data={profile} />
-      <MeetingHistory />
+      <MeetingHistory data={meetings} />
       <AverageTrainingData />
       <TrainingStatusGraph />
     </>

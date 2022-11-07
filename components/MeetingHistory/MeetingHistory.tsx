@@ -1,45 +1,58 @@
-import { Collapse, Table } from 'antd';
-import { ColumnsType } from 'antd/lib/table';
 import React, { useState } from 'react';
+import { Button, Collapse, Space, Table } from 'antd';
+import { ColumnsType } from 'antd/lib/table';
+import {
+  UploadOutlined,
+  DownloadOutlined,
+  DeleteOutlined,
+  FilePdfOutlined,
+  FileImageOutlined,
+  MinusOutlined,
+} from '@ant-design/icons';
 
 const { Panel } = Collapse;
 
-interface DataType {
-  key: React.Key;
-  name: string;
-  age: number;
-  address: string;
+interface IMeetingHistoryProps {
+  data: Array<MeetingProps>;
 }
 
-const columns: ColumnsType<DataType> = [
+const renderFileFormat = (format: Pick<MeetingProps, 'fileFormat'> & string) => {
+  switch (format) {
+    case 'pdf':
+      return <FilePdfOutlined />;
+    case 'image':
+      return <FileImageOutlined />;
+    case undefined:
+      return <MinusOutlined />;
+  }
+};
+
+const columns: ColumnsType<MeetingProps> = [
   {
-    title: 'Name',
-    dataIndex: 'name',
+    title: '상담 일자',
+    dataIndex: 'date',
   },
   {
-    title: 'Age',
-    dataIndex: 'age',
+    title: '상담 시간',
+    dataIndex: 'time',
   },
   {
-    title: 'Address',
-    dataIndex: 'address',
+    title: '상담명',
+    dataIndex: 'title',
+    width: '50%',
+  },
+  {
+    title: '상담 레포트',
+    dataIndex: 'fileFormat',
+    render: (file) => renderFileFormat(file),
+  },
+  {
+    title: '파일 크기',
+    dataIndex: 'fileSize',
   },
 ];
 
-const data: DataType[] = [];
-for (let i = 0; i < 46; i++) {
-  data.push({
-    key: i,
-    name: `Edward King ${i}`,
-    age: 32,
-    address: `London, Park Lane no. ${i}`,
-  });
-}
-
-const MeetingHistory = () => {
-  const onChange = (key: string | string[]) => {
-    console.log(key);
-  };
+const MeetingHistory = ({ data }: IMeetingHistoryProps) => {
   const [selectedRowKeys, setSelectedRowKeys] = useState<React.Key[]>([]);
 
   const onSelectChange = (newSelectedRowKeys: React.Key[]) => {
@@ -52,21 +65,32 @@ const MeetingHistory = () => {
     onChange: onSelectChange,
   };
 
-  const hasSelected = selectedRowKeys.length > 0;
-
   return (
-    <Collapse defaultActiveKey={['1']} onChange={onChange} style={{ margin: '0 24px' }}>
-      <Panel header="This is panel header 1" key="1">
+    <Collapse defaultActiveKey={['1']} style={{ margin: '0 24px' }}>
+      <Panel header="상담 기록 내역" key="1">
         <div>
-          <div style={{ marginBottom: 16 }}>
-            <span style={{ marginLeft: 8 }}>
-              {hasSelected ? `Selected ${selectedRowKeys.length} items` : ''}
+          <div className="auto-layout-space-between" style={{ marginBottom: 16 }}>
+            <span>
+              상담 기록 수 &nbsp;<b>총 {selectedRowKeys.length}회</b>
             </span>
+
+            <Space>
+              <Button size="middle" icon={<UploadOutlined />}>
+                올리기
+              </Button>
+              <Button size="middle" icon={<DownloadOutlined />}>
+                내려받기
+              </Button>
+              <Button size="middle" icon={<DeleteOutlined />}>
+                삭제
+              </Button>
+            </Space>
           </div>
           <Table
+            size="small"
             rowSelection={rowSelection}
             columns={columns}
-            dataSource={data}
+            dataSource={data.map((el, index) => ({ ...el, key: index }))}
             pagination={{ position: ['bottomCenter'], pageSize: 5 }}
           />
         </div>
