@@ -16,9 +16,14 @@ a {
 }
 
 :root {
+  --color-geek-blue-400: #69c0ff;
   --color-geek-blue-600: #4d61ff;
   --color-geek-blue-800: #242bb3;
   --color-geek-blue-1000: #100e66;
+
+  --color-gray-200: #e5e5e5;
+
+  --color-red-400: #ff7875;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -31,9 +36,16 @@ a {
   }
 }
 
-.ant-menu-item-selected {
-  background-color: var(--color-geek-blue-800) !important;
+.ant-segmented-item {
+  transition: var(--color-geek-blue-600) 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+}
+.ant-segmented-item-selected {
+  background-color: var(--color-geek-blue-600) !important;
   color: #ffffff !important;
+}
+
+.ant-segmented-thumb {
+  background-color: var(--color-geek-blue-600) !important;
 }
 
 .auto-layout {
