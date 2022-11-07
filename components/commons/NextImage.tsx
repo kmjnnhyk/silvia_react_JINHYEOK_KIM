@@ -10,7 +10,7 @@ interface INextImageProps {
 }
 
 const NextImage = ({ src, alt, width, height, style }: INextImageProps) => {
-  return <Image src={src} alt={alt} width={width} height={height} style={style} />;
+  return <Image priority src={src} alt={alt} width={width} height={height} style={style} />;
 };
 
 export default NextImage;

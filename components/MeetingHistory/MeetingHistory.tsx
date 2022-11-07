@@ -67,7 +67,7 @@ const MeetingHistory = () => {
             rowSelection={rowSelection}
             columns={columns}
             dataSource={data}
-            pagination={{ position: ['bottomCenter'] }}
+            pagination={{ position: ['bottomCenter'], pageSize: 5 }}
           />
         </div>
       </Panel>
