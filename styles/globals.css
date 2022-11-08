@@ -79,6 +79,14 @@ a {
   max-height: 390px;
 }
 
+.graph-tab-area-grid {
+  display: grid;
+  grid-template-columns: 1fr 250px;
+  gap: 60px;
+  justify-content: center;
+  align-items: center;
+}
+
 /* .ant-menu-item::after {
   display: none !important;
 } */

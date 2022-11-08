@@ -6,11 +6,12 @@ const useSize = (element: HTMLDivElement) => {
 
   useLayoutEffect(() => {
     const onResize = () => setSize(getSize(element));
+    onResize();
     window.addEventListener('resize', onResize);
     return () => {
       window.removeEventListener('resize', onResize);
     };
-  });
+  }, [element]);
   return size;
 };
 
