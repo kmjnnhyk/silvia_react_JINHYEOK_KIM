@@ -6,7 +6,8 @@ interface Props {
 
 export const Ul = styled.ul`
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(136px, 1fr));
+  flex-wrap: wrap;
   gap: 23px;
   padding: 0;
   list-style: none;

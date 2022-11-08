@@ -1,6 +1,6 @@
 import { StaticImageData } from 'next/image';
 
-interface ProfileProps {
+export interface ProfileProps {
   nickname: string;
   age: number;
   isMale: boolean;
@@ -12,7 +12,7 @@ interface ProfileProps {
   imageSrc?: string;
 }
 
-interface MeetingProps {
+export interface MeetingProps {
   id: number;
   date: string;
   startTime: string;
@@ -24,10 +24,15 @@ interface MeetingProps {
 
 type CardType = 'time' | 'count';
 
-interface CardProps {
+export interface CardProps {
   type: CardType;
   iconSrc: StaticImageData;
   title: string;
   count: number;
   increment: number;
+}
+
+export interface TotalDataProps {
+  date: string;
+  runningTime: number;
 }

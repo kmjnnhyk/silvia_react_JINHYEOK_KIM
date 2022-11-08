@@ -9,7 +9,10 @@ interface IAverageTrainingDataProps {
 
 const AverageTrainingData = ({ data }: IAverageTrainingDataProps) => {
   return (
-    <Space direction="vertical" style={{ padding: '21px 24px' }}>
+    <Space
+      direction="vertical"
+      style={{ padding: '21px 24px', backgroundColor: 'var(--color-gray-200)' }}
+    >
       <div style={{ marginBottom: '16px' }}>
         <span>데이터 탐색 기간 설정</span>
         <Segmented

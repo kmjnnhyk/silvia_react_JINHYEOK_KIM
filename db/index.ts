@@ -1,4 +1,13 @@
 export const db = {
+  totalData: [
+    { date: '4/15 (월)', runningTime: 13 },
+    { date: '4/16 (화)', runningTime: 42 },
+    { date: '4/17 (수)', runningTime: 51 },
+    { date: '4/18 (목)', runningTime: 100 },
+    { date: '4/19 (금)', runningTime: 82 },
+    { date: '4/20 (토)', runningTime: 18 },
+    { date: '4/21 (일)', runningTime: 42 },
+  ],
   averageTrainingData: [
     {
       type: 'time',
