@@ -39,6 +39,7 @@ a {
 .ant-segmented-item {
   transition: var(--color-geek-blue-600) 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) !important;
 }
+
 .ant-segmented-item-selected {
   background-color: var(--color-geek-blue-600) !important;
   color: #ffffff !important;
@@ -51,6 +52,10 @@ a {
 .ant-menu-item-selected {
   background-color: var(--color-geek-blue-800) !important;
   color: #ffffff !important;
+}
+
+.ant-tooltip {
+  width: 800px !important;
 }
 
 .auto-layout {
