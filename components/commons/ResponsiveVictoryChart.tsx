@@ -12,7 +12,7 @@ const ResponsiveVictoryChart = (initialProps: VictoryChartProps) => {
   };
 
   return (
-    <div className="chart" ref={ref} style={{ width: '1024px', height: '400px' }}>
+    <div className="chart" ref={ref} style={{ maxWidth: '1024px', height: '400px' }}>
       <VictoryChart {...props} />
     </div>
   );

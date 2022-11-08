@@ -81,7 +81,7 @@ a {
 
 .graph-tab-area-grid {
   display: grid;
-  grid-template-columns: 1fr 250px;
+  grid-template-columns: 1fr 200px;
   gap: 60px;
   justify-content: center;
   align-items: center;
