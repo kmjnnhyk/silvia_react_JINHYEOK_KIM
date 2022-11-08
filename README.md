@@ -1,34 +1,11 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next
+로컬 목업 데이터 db 폴더에 있는 JSON 파일은 간단하게 Next.js Route API를 이용하여 http://localhost:3000/api에서 fetch 해오는 느낌으로 사용했습니다. 대쉬보드라 일단 기본 index 페이지에 다 구현을 했는데 layout을 나눠 antd를 적용했습니다.
 
-## Getting Started
+# Ts
+마음에 여유가 없어서 그런지 구조를 좀 제대로 짜지 못한 것 같은데 감안하고 봐주시면 감사하겠습니다. 😭
 
-First, run the development server:
+# Ant Design
+이번에 Material UI나 Bootstrap, Ant Design 같은 디자인 시스템을 제대로는 처음 이용해봤습니다. 기본 적용되어 있는 스타일에 접근하거나 다른 라이브러리와 생기는 자잘한 충돌은 어쩔 수 없었지만 제작되어 있는 다양한 컴포넌트들을 금방 가져다 쓸 수 있어서 작업 시간을 많이 줄일 수 있었습니다. 다 만들고 나중에 antd에 있는 컴포넌트라 다시 적용하고 하는 과정이 몇 번 있었지만 굉장히 좋은 경험이었습님다.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# Victory
+그래프가 svg 형식으로 추출이 되는? 방식인 것 같아서 화면 비율이나 요소들을 배치하는데에 가장 어려움을 겪은 것 같습니다. 아직도 확실하게는 내부 구조를 정확하게는 파악하지 못 했지만 구글링을 하면서 어느정도 잡았고 나머지 부분들은 docs에 굉장히 정리가 잘 되어있고 상세히 잘 나와있어서 일단 쭉 빠르게 훑어 보면서 적용했다가 막히면 다른 방식으로 수정해가며 최대한 비슷하게 완성했습니다. 수치에 hover 했을 때 antd <Popover />를 이용하려고 했을 때에도 다른 라이브러리라 충돌이 있어서 살짝 막혔는데 커스텀 컴포넌트를 제작해서 적용하는 방식을 이용해서 해결했습니다.
