@@ -9,6 +9,7 @@ import {
   FileImageOutlined,
   MinusOutlined,
 } from '@ant-design/icons';
+import { MeetingProps } from 'types';
 
 const { Panel } = Collapse;
 

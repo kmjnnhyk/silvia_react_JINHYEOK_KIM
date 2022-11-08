@@ -1,9 +1,13 @@
 import { Segmented, Space } from 'antd';
 import React from 'react';
-import TrainingDataCard from './TrainingDataCard';
-import cardSrc from 'assets/images/card/cognitive.svg';
+import { CardProps } from 'types';
+import DataList from './DataList';
 
-const AverageTrainingData = () => {
+interface IAverageTrainingDataProps {
+  data: Array<CardProps>;
+}
+
+const AverageTrainingData = ({ data }: IAverageTrainingDataProps) => {
   return (
     <Space direction="vertical" style={{ padding: '21px 24px' }}>
       <div style={{ marginBottom: '16px' }}>
@@ -15,13 +19,7 @@ const AverageTrainingData = () => {
         />
       </div>
       <div>
-        <TrainingDataCard
-          title={'평균 인지 훈련 시간'}
-          iconSrc={cardSrc}
-          type="time"
-          count={80}
-          increment={20}
-        />
+        <DataList data={data} />
       </div>
     </Space>
   );

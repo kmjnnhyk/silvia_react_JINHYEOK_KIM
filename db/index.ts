@@ -1,4 +1,55 @@
 export const db = {
+  averageTrainingData: [
+    {
+      type: 'time',
+      count: 80,
+      increment: 20,
+      title: '평균 인지 훈련 시간',
+      iconSrc: '/card/cognitive.svg',
+    },
+    {
+      type: 'time',
+      count: 80,
+      increment: 70,
+      title: '평균 명상 시간',
+      iconSrc: '/card/meditation.svg',
+    },
+    {
+      type: 'time',
+      count: 80,
+      increment: 30,
+      title: '평균 운동 시간',
+      iconSrc: '/card/running.svg',
+    },
+    {
+      type: 'count',
+      count: 2,
+      increment: -3,
+      title: '평균 운동 횟수',
+      iconSrc: '/card/running.svg',
+    },
+    {
+      type: 'count',
+      count: 0,
+      increment: -3,
+      title: '평균 식사 기록 횟수',
+      iconSrc: '/card/meal.svg',
+    },
+    {
+      type: 'time',
+      count: 80,
+      increment: 20,
+      title: '평균 수면 시간',
+      iconSrc: '/card/sleep.svg',
+    },
+    {
+      type: 'count',
+      count: 7,
+      increment: 3,
+      title: '평균 메모 기록 횟수',
+      iconSrc: '/card/memo.svg',
+    },
+  ],
   profile: {
     nickname: '김진혁',
     age: 28,

@@ -4,10 +4,22 @@ interface Props {
   isIncreased: boolean;
 }
 
+export const Ul = styled.ul`
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 23px;
+  padding: 0;
+  list-style: none;
+`;
+
+export const Li = styled.li`
+  flex-grow: 1;
+`;
+
 export const Container = styled.div<Props>`
   position: relative;
   padding: 8px;
-  width: 156px;
+  /* width: 156px; */
   height: 118px;
   display: flex;
   flex-direction: column;

@@ -1,3 +1,5 @@
+import { StaticImageData } from 'next/image';
+
 interface ProfileProps {
   nickname: string;
   age: number;
@@ -18,4 +20,14 @@ interface MeetingProps {
   title: string;
   fileFormat: string;
   fileSize: string;
+}
+
+type CardType = 'time' | 'count';
+
+interface CardProps {
+  type: CardType;
+  iconSrc: StaticImageData;
+  title: string;
+  count: number;
+  increment: number;
 }
